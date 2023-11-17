@@ -64,6 +64,10 @@ body * {
   margin-top: 8px;
 }
 
+.light #switch button{
+  animation: slide-in 0.4s forwards;
+}
+
 #switch{
   position: relative;
   padding: 16px 0px;
@@ -87,6 +91,8 @@ body * {
   right: var(--switch-button-position);
   z-index: 1;
   top: 12px;
+
+  animation: slide-back 0.2s;
 }
 
 #switch span{
@@ -157,4 +163,22 @@ footer{
   justify-content: center;
   align-items: center;
   margin-top: 56px;
+}
+
+@keyframes slide-in{
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes slide-back{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
 }
