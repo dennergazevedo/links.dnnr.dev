@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,17 +12,19 @@
   <link rel="stylesheet" href="styles.css" />
   <title>dnnr</title>
   <script>
-    function toggleTheme(){
+    function toggleTheme() {
       document.querySelector("html").classList.toggle("light");
       const profileImg = document.querySelector("#profile img");
       profileImg.src = !profileImg.src.includes("light") ? "./assets/avatar-light.png" : "./assets/avatar.png";
     }
   </script>
 </head>
+
 <body>
   <div id="container">
     <div id="profile">
-      <img src="./assets/avatar.png" alt="Foto de Denner Azevedo sorrindo, usando óculos e camisa azul, barba e fundo azul claro." />
+      <img src="./assets/avatar.png"
+        alt="Foto de Denner Azevedo sorrindo, usando óculos e camisa azul, barba e fundo azul claro." />
       <p>@dnnraz</p>
     </div>
     <div id="switch">
@@ -33,7 +36,11 @@
         <a target="_blank" rel="noopener" href="https://social.dnnr.dev/">Saiba mais sobre mim</a>
       </li>
       <li>
-        <a target="_blank" rel="noopener" href="mailto:dennergazevedo@gmail.com" subject="[Fale Comigo] dnnr.dev">Fale comigo</a>
+        <a href="./assets/dnr-cv.pdf" download="dnr-cv.pdf">Baixe o meu CV</a>
+      </li>
+      <li>
+        <a target="_blank" rel="noopener" href="mailto:dennergazevedo@gmail.com" subject="[Fale Comigo] dnnr.dev">Fale
+          comigo</a>
       </li>
       <li>
         <a target="_blank" rel="noopener" href="https://os.dnnr.dev/">OS.dnnr</a>
@@ -43,16 +50,16 @@
       </li>
     </ul>
     <div id="social-links">
-      <a target="_blank" rel="noopener"  href="https://github.com/dennergazevedo">
+      <a target="_blank" rel="noopener" href="https://github.com/dennergazevedo">
         <ion-icon name="logo-github"></ion-icon>
       </a>
-      <a target="_blank" rel="noopener"  href="https://www.instagram.com/dnnraz/">
+      <a target="_blank" rel="noopener" href="https://www.instagram.com/dnnraz/">
         <ion-icon name="logo-instagram"></ion-icon>
       </a>
-      <a target="_blank" rel="noopener"  href="https://www.linkedin.com/in/dnnr">
+      <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/dnnr">
         <ion-icon name="logo-linkedin"></ion-icon>
       </a>
-      <a target="_blank" rel="noopener"  href="https://www.youtube.com/@dnnraz">
+      <a target="_blank" rel="noopener" href="https://www.youtube.com/@dnnraz">
         <ion-icon name="logo-youtube"></ion-icon>
       </a>
     </div>
@@ -61,4 +68,5 @@
     <p>Feito por <a href="https://dnnr.dev">dnnr.dev</a></p>
   </footer>
 </body>
+
 </html>
