@@ -6,7 +6,7 @@
 
 :root {
   --text-color: #FFF;
-  --border-color: #c2d9ff;
+  --border-color: #f5f5f5;
   --bg-url: url(./assets/bg-dark.jpg);
   --bg-profile: #333;
   --switch-icon: url(./assets/moon.svg);
@@ -118,9 +118,9 @@ body * {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--border-color);
-  background: #FFF3;
-  border-radius: 4px;
+  border: 1px solid #333;
+  background: #3334;
+  border-radius: 50px;
   backdrop-filter: blur(4px);
 }
 
@@ -138,6 +138,7 @@ body * {
 
 #link-list li a:hover{
   background: #aaa1;
+  border-radius: 50px;
 }
 
 #social-links{
