@@ -1,12 +1,19 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dnnr // dev</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Ionicons -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -15,15 +22,19 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="styles.css" />
-    <title>dnnr</title>
+
     <script>
       function toggleTheme() {
-        document.querySelector("html").classList.toggle("light");
+        const html = document.querySelector("html");
+        html.classList.toggle("light");
+
+        const isLight = html.classList.contains("light");
         const profileImg = document.querySelector("#profile img");
-        profileImg.src = !profileImg.src.includes("light")
+
+        // Mantive a lógica de troca de imagem se existir
+        profileImg.src = isLight
           ? "./assets/avatar-light.png"
           : "./assets/avatar.png";
       }
@@ -32,58 +43,64 @@
 
   <body>
     <div id="container">
-      <div id="profile">
+      <header id="profile">
         <img
           src="./assets/avatar.png"
-          alt="Foto de Denner Azevedo sorrindo, usando óculos e camisa azul, barba e fundo azul claro."
+          alt="Foto de Denner Azevedo"
+          onerror="this.src = 'https://github.com/dennergazevedo.png'"
         />
         <p>@dnnraz</p>
-      </div>
+      </header>
+
       <div id="switch">
-        <button onClick="toggleTheme()"></button>
-        <span onClick="toggleTheme()"></span>
+        <button onClick="toggleTheme()" aria-label="Alterar tema"></button>
       </div>
-      <ul id="link-list">
-        <li>
-          <a target="_blank" rel="noopener" href="https://dnnr.dev/">
-            <ion-icon name="planet"></ion-icon>
-            <p>Saiba mais sobre mim</p>
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://www.youtube.com/@devdenegociosmg"
-          >
-            <ion-icon name="logo-youtube"></ion-icon>
-            <p>Youtube</p>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://divisor.dev">
-            <ion-icon name="trending-up-outline"></ion-icon>
-            <p>Divisor</p>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://os.dnnr.dev/">
-            <ion-icon name="save"></ion-icon>
-            <p>os.dnnr.dev</p>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://tools.dnnr.dev/">
-            <ion-icon name="hammer"></ion-icon>
-            <p>tools.dnnr.dev</p>
-          </a>
-        </li>
-      </ul>
-      <div id="social-links">
+
+      <main>
+        <ul id="link-list">
+          <li>
+            <a target="_blank" rel="noopener" href="https://dnnr.dev/">
+              <ion-icon name="planet-outline"></ion-icon>
+              <span>Saiba mais sobre mim</span>
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.youtube.com/@devdenegociosmg"
+            >
+              <ion-icon name="logo-youtube"></ion-icon>
+              <span>YouTube</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://divisor.dev">
+              <ion-icon name="trending-up-outline"></ion-icon>
+              <span>Divisor</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://os.dnnr.dev/">
+              <ion-icon name="terminal-outline"></ion-icon>
+              <span>os.dnnr.dev</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://tools.dnnr.dev/">
+              <ion-icon name="hammer-outline"></ion-icon>
+              <span>tools.dnnr.dev</span>
+            </a>
+          </li>
+        </ul>
+      </main>
+
+      <nav id="social-links">
         <a
           target="_blank"
           rel="noopener"
           href="https://github.com/dennergazevedo"
+          aria-label="GitHub"
         >
           <ion-icon name="logo-github"></ion-icon>
         </a>
@@ -91,6 +108,7 @@
           target="_blank"
           rel="noopener"
           href="https://www.linkedin.com/in/dnnr"
+          aria-label="LinkedIn"
         >
           <ion-icon name="logo-linkedin"></ion-icon>
         </a>
@@ -98,23 +116,31 @@
           target="_blank"
           rel="noopener"
           href="mailto:dennergazevedo@gmail.com"
+          aria-label="E-mail"
         >
-          <ion-icon name="send"></ion-icon>
+          <ion-icon name="mail-outline"></ion-icon>
         </a>
         <a
           target="_blank"
           rel="noopener"
           href="https://www.instagram.com/dnnraz/"
+          aria-label="Instagram"
         >
           <ion-icon name="logo-instagram"></ion-icon>
         </a>
-        <a target="_blank" rel="noopener" href="./assets/dnr-cv.pdf">
-          <ion-icon name="document"></ion-icon>
+        <a
+          target="_blank"
+          rel="noopener"
+          href="./assets/dnr-cv.pdf"
+          aria-label="Currículo"
+        >
+          <ion-icon name="document-text-outline"></ion-icon>
         </a>
-      </div>
+      </nav>
     </div>
+
     <footer>
-      <p>Feito por <a href="https://dnnr.dev">dnnr.dev</a></p>
+      <p>&lt;modified by dnnr /&gt; 2026</p>
     </footer>
   </body>
 </html>
