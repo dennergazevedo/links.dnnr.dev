@@ -111,51 +111,69 @@ body {
   transform: scale(1.05);
 }
 
-#profile p {
+#profile h1 {
   font-family: "JetBrains Mono", monospace;
   font-weight: 500;
   color: var(--accent-color);
   margin-top: 12px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   letter-spacing: -0.02em;
+}
+
+#profile .bio {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 8px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Theme Switch */
 #switch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 32px;
-  gap: 12px;
-  position: relative;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 100;
 }
 
 #switch button {
-  width: 56px;
-  height: 28px;
-  border-radius: 999px;
-  background: var(--switch-bg);
-  border: 1px solid var(--card-border);
-  position: relative;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-#switch button::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
-  background: var(--switch-toggle);
-  border-radius: 50%;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+#switch button:hover {
+  transform: scale(1.1);
+  border-color: var(--accent-color);
 }
 
-.light #switch button::after {
-  transform: translateX(28px);
+#switch .moon-icon {
+  display: block;
+  font-size: 20px;
+  color: #ffbf00; /* Amber */
+  filter: drop-shadow(0 0 8px rgba(255, 191, 0, 0.4));
+}
+
+#switch .sun-icon {
+  display: none;
+  font-size: 24px;
+  color: #ff8c00; /* Dark Orange */
+  filter: drop-shadow(0 0 8px rgba(255, 140, 0, 0.4));
+}
+
+.light #switch .moon-icon {
+  display: none;
+}
+
+.light #switch .sun-icon {
+  display: block;
 }
 
 /* Link List */
@@ -163,20 +181,18 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 #link-list li a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 16px;
+  justify-content: space-between;
+  padding: 16px 20px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 12px;
   text-decoration: none;
-  font-weight: 500;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: all 0.2s ease;
@@ -187,11 +203,51 @@ body {
   background: var(--card-border);
   transform: translateY(-2px);
   border-color: var(--accent-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#link-list li a ion-icon {
-  font-size: 1.25rem;
+.link-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.link-content .main-icon {
+  font-size: 24px;
   color: var(--accent-color);
+  min-width: 24px;
+}
+
+.link-content .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.link-content .text strong {
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+}
+
+.link-content .text span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.external-icon {
+  font-size: 18px;
+  color: var(--text-secondary);
+  opacity: 0.4;
+  transition: all 0.2s ease;
+}
+
+#link-list li a:hover .external-icon {
+  opacity: 1;
+  color: var(--accent-color);
+  transform: translate(2px, -2px);
 }
 
 /* Social Links */
