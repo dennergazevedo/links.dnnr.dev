@@ -1,184 +1,293 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dnnr // tech & business</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>dnnr // tech & business</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Ionicons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-
-    <link rel="stylesheet" href="styles.css" />
-
-    <script>
-      function toggleTheme() {
-        const html = document.querySelector("html");
-        html.classList.toggle("light");
-
-        const isLight = html.classList.contains("light");
-        const profileImg = document.querySelector("#profile img");
-
-        profileImg.src = isLight
-          ? "./assets/avatar-light.png"
-          : "./assets/avatar.png";
-      }
-    </script>
-  </head>
-
-  <body>
-    <div id="container">
-      <header id="profile">
-        <img
-          src="./assets/avatar.png"
-          alt="Foto de Denner Azevedo"
-          onerror="this.src = 'https://github.com/dennergazevedo.png'"
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
         />
-        <h1>@dnnraz</h1>
-        <p class="bio">
-          Sempre construindo, aprendendo e conectando tecnologia a negócios.
-        </p>
-      </header>
 
-      <div id="switch">
-        <button onClick="toggleTheme()" aria-label="Alterar tema">
-          <ion-icon name="moon" class="moon-icon"></ion-icon>
-          <ion-icon name="sunny" class="sun-icon"></ion-icon>
-        </button>
-      </div>
+        <!-- Ionicons -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
 
-      <main>
-        <ul id="link-list">
-          <li>
-            <a target="_blank" rel="noopener" href="https://dnnr.dev/">
-              <div class="link-content">
-                <ion-icon name="planet-outline" class="main-icon"></ion-icon>
-                <div class="text">
-                  <strong>Saiba mais sobre mim</strong>
-                  <span>Portfólio com trajetória, projetos e carreira.</span>
-                </div>
-              </div>
-              <ion-icon name="open-outline" class="external-icon"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              rel="noopener"
-              href="https://www.youtube.com/@devdenegociosmg"
-            >
-              <div class="link-content">
-                <ion-icon name="logo-youtube" class="main-icon"></ion-icon>
-                <div class="text">
-                  <strong>YouTube</strong>
-                  <span>Canal Dev de Negócios: tecnologia e insights.</span>
-                </div>
-              </div>
-              <ion-icon name="open-outline" class="external-icon"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener" href="https://divisor.dev">
-              <div class="link-content">
-                <ion-icon
-                  name="trending-up-outline"
-                  class="main-icon"
-                ></ion-icon>
-                <div class="text">
-                  <strong>Divisor</strong>
-                  <span>Plataforma de Testes A/B e Feature Flags.</span>
-                </div>
-              </div>
-              <ion-icon name="open-outline" class="external-icon"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener" href="https://os.dnnr.dev/">
-              <div class="link-content">
-                <ion-icon name="terminal-outline" class="main-icon"></ion-icon>
-                <div class="text">
-                  <strong>os.dnnr.dev</strong>
-                  <span>Experiência interativa inspirada no Windows XP.</span>
-                </div>
-              </div>
-              <ion-icon name="open-outline" class="external-icon"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener" href="https://tools.dnnr.dev/">
-              <div class="link-content">
-                <ion-icon name="hammer-outline" class="main-icon"></ion-icon>
-                <div class="text">
-                  <strong>tools.dnnr.dev</strong>
-                  <span>Utilitários essenciais para o fluxo dev.</span>
-                </div>
-              </div>
-              <ion-icon name="open-outline" class="external-icon"></ion-icon>
-            </a>
-          </li>
-        </ul>
-      </main>
+        <link rel="stylesheet" href="styles.css" />
 
-      <nav id="social-links">
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://github.com/dennergazevedo"
-          aria-label="GitHub"
-        >
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://www.linkedin.com/in/dnnr"
-          aria-label="LinkedIn"
-        >
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="mailto:dennergazevedo@gmail.com"
-          aria-label="E-mail"
-        >
-          <ion-icon name="mail-outline"></ion-icon>
-        </a>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://www.instagram.com/dnnraz/"
-          aria-label="Instagram"
-        >
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="./assets/dnr-cv.pdf"
-          aria-label="Currículo"
-        >
-          <ion-icon name="document-text-outline"></ion-icon>
-        </a>
-      </nav>
-    </div>
+        <script>
+            function toggleTheme() {
+                const html = document.querySelector("html");
+                html.classList.toggle("light");
 
-    <footer>
-      <p>&lt;building systems /&gt; 2026</p>
-    </footer>
-  </body>
+                const isLight = html.classList.contains("light");
+                const profileImg = document.querySelector("#profile img");
+
+                profileImg.src = isLight
+                    ? "./assets/avatar-light.png"
+                    : "./assets/avatar.png";
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="container">
+            <header id="profile">
+                <img
+                    src="./assets/avatar.png"
+                    alt="Foto de Denner Azevedo"
+                    onerror="this.src = 'https://github.com/dennergazevedo.png'"
+                />
+                <h1>@dnnraz</h1>
+                <p class="bio">
+                    Sempre construindo, aprendendo e conectando tecnologia a
+                    negócios.
+                </p>
+            </header>
+
+            <div id="switch">
+                <button onClick="toggleTheme()" aria-label="Alterar tema">
+                    <ion-icon name="moon" class="moon-icon"></ion-icon>
+                    <ion-icon name="sunny" class="sun-icon"></ion-icon>
+                </button>
+            </div>
+
+            <main>
+                <ul id="link-list">
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noopener"
+                            href="https://dnnr.dev/"
+                        >
+                            <div class="link-content">
+                                <ion-icon
+                                    name="planet-outline"
+                                    class="main-icon"
+                                ></ion-icon>
+                                <div class="text">
+                                    <strong>Saiba mais sobre mim</strong>
+                                    <span
+                                        >Portfólio com trajetória, projetos e
+                                        carreira.</span
+                                    >
+                                </div>
+                            </div>
+                            <ion-icon
+                                name="open-outline"
+                                class="external-icon"
+                            ></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noopener"
+                            href="https://www.youtube.com/@devdenegociosmg"
+                        >
+                            <div class="link-content">
+                                <ion-icon
+                                    name="logo-youtube"
+                                    class="main-icon"
+                                ></ion-icon>
+                                <div class="text">
+                                    <strong>YouTube</strong>
+                                    <span
+                                        >Canal Dev de Negócios: tecnologia e
+                                        insights.</span
+                                    >
+                                </div>
+                            </div>
+                            <ion-icon
+                                name="open-outline"
+                                class="external-icon"
+                            ></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noopener"
+                            href="https://divisor.dev"
+                        >
+                            <div class="link-content">
+                                <ion-icon
+                                    name="trending-up-outline"
+                                    class="main-icon"
+                                ></ion-icon>
+                                <div class="text">
+                                    <strong>Divisor</strong>
+                                    <span
+                                        >Plataforma de Testes A/B e Feature
+                                        Flags.</span
+                                    >
+                                </div>
+                            </div>
+                            <ion-icon
+                                name="open-outline"
+                                class="external-icon"
+                            ></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noopener"
+                            href="https://os.dnnr.dev/"
+                        >
+                            <div class="link-content">
+                                <ion-icon
+                                    name="terminal-outline"
+                                    class="main-icon"
+                                ></ion-icon>
+                                <div class="text">
+                                    <strong>os.dnnr.dev</strong>
+                                    <span
+                                        >Experiência interativa inspirada no
+                                        Windows XP.</span
+                                    >
+                                </div>
+                            </div>
+                            <ion-icon
+                                name="open-outline"
+                                class="external-icon"
+                            ></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noopener"
+                            href="https://tools.dnnr.dev/"
+                        >
+                            <div class="link-content">
+                                <ion-icon
+                                    name="hammer-outline"
+                                    class="main-icon"
+                                ></ion-icon>
+                                <div class="text">
+                                    <strong>tools.dnnr.dev</strong>
+                                    <span
+                                        >Utilitários essenciais para o fluxo
+                                        dev.</span
+                                    >
+                                </div>
+                            </div>
+                            <ion-icon
+                                name="open-outline"
+                                class="external-icon"
+                            ></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noopener"
+                            href="https://news.dnnr.dev/"
+                        >
+                            <div class="link-content">
+                                <ion-icon
+                                    name="newspaper-outline"
+                                    class="main-icon"
+                                ></ion-icon>
+                                <div class="text">
+                                    <strong>news.dnnr.dev</strong>
+                                    <span
+                                        >Notícias e artigos sobre tecnologia e
+                                        negócios.</span
+                                    >
+                                </div>
+                            </div>
+                            <ion-icon
+                                name="open-outline"
+                                class="external-icon"
+                            ></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noopener"
+                            href="https://blog.dnnr.dev/"
+                        >
+                            <div class="link-content">
+                                <ion-icon
+                                    name="chatbox-ellipses-outline"
+                                    class="main-icon"
+                                ></ion-icon>
+                                <div class="text">
+                                    <strong>blog.dnnr.dev</strong>
+                                    <span
+                                        >Tecnologia, inovação e o mundo dos
+                                        negócios</span
+                                    >
+                                </div>
+                            </div>
+                            <ion-icon
+                                name="open-outline"
+                                class="external-icon"
+                            ></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </main>
+
+            <nav id="social-links">
+                <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://github.com/dennergazevedo"
+                    aria-label="GitHub"
+                >
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.linkedin.com/in/dnnr"
+                    aria-label="LinkedIn"
+                >
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:dennergazevedo@gmail.com"
+                    aria-label="E-mail"
+                >
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+                <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.instagram.com/dnnraz/"
+                    aria-label="Instagram"
+                >
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a
+                    target="_blank"
+                    rel="noopener"
+                    href="./assets/dnr-cv.pdf"
+                    aria-label="Currículo"
+                >
+                    <ion-icon name="document-text-outline"></ion-icon>
+                </a>
+            </nav>
+        </div>
+
+        <footer>
+            <p>&lt;building systems /&gt; 2026</p>
+        </footer>
+    </body>
 </html>
